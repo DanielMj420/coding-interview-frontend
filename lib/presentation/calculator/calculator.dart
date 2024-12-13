@@ -38,7 +38,18 @@ class Calculator extends StatelessWidget {
                 const ExchangeContainer(),
                 SizedBox(height: 10.h),
                 CustomCriptoFormField(
-                  currency: 'USDT',
+                  currency: state.exchangeType.failureOption.fold(
+                    (_) {
+                      return "USDT";
+                    },
+                    (_) {
+                      if (state.exchangeType.getOrCrash() == 1) {
+                        return state.fiatCurrency;
+                      } else {
+                        return "USDT";
+                      }
+                    },
+                  ),
                   controller: state.controllerManager.getController("amount"),
                   onChanged: (value) {
                     getIt<ExchangeRateBloc>().add(
@@ -56,7 +67,18 @@ class Calculator extends StatelessWidget {
                 CustomDescriptionRow(
                   textKey: 'Tasa estimada',
                   textValue:
-                      '= ${state.fiatToCryptoExchangeRate.toString()} VES',
+                      '= ${state.fiatToCryptoExchangeRate.toString()} ${state.exchangeType.failureOption.fold(
+                    (_) {
+                      return "USDT";
+                    },
+                    (_) {
+                      if (state.exchangeType.getOrCrash() == 0) {
+                        return state.fiatCurrency;
+                      } else {
+                        return "USDT";
+                      }
+                    },
+                  )}',
                 ),
                 SizedBox(height: 8.h),
                 CustomDescriptionRow(
@@ -66,7 +88,18 @@ class Calculator extends StatelessWidget {
                       return state.money.getOrCrash()["amount"];
                     }),
                     exchangeRate: state.fiatToCryptoExchangeRate,
-                  ).toString()} VES",
+                  ).toString()} ${state.exchangeType.failureOption.fold(
+                    (_) {
+                      return "USDT";
+                    },
+                    (_) {
+                      if (state.exchangeType.getOrCrash() == 0) {
+                        return state.fiatCurrency;
+                      } else {
+                        return "USDT";
+                      }
+                    },
+                  )}",
                 ),
                 SizedBox(height: 8.h),
                 const CustomDescriptionRow(
