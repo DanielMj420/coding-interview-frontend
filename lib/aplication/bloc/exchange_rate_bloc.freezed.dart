@@ -18,56 +18,72 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$ExchangeRateEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
-    required TResult Function(String originCurrency) originCurrencyChanged,
-    required TResult Function(String destinationCurrency)
-        destinationCurrencyChanged,
+    required TResult Function() initialEmitted,
+    required TResult Function() exchangeTypeSwaped,
+    required TResult Function(String criptoCurrency) criptoCurrencyChanged,
+    required TResult Function(String fiatCurrency) fiatCurrencyChanged,
     required TResult Function(double amount) amountMoneyChanged,
+    required TResult Function(String currency) currencyMoneyChanged,
+    required TResult Function() getExchangeRates,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
-    TResult? Function(String originCurrency)? originCurrencyChanged,
-    TResult? Function(String destinationCurrency)? destinationCurrencyChanged,
+    TResult? Function()? initialEmitted,
+    TResult? Function()? exchangeTypeSwaped,
+    TResult? Function(String criptoCurrency)? criptoCurrencyChanged,
+    TResult? Function(String fiatCurrency)? fiatCurrencyChanged,
     TResult? Function(double amount)? amountMoneyChanged,
+    TResult? Function(String currency)? currencyMoneyChanged,
+    TResult? Function()? getExchangeRates,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
-    TResult Function(String originCurrency)? originCurrencyChanged,
-    TResult Function(String destinationCurrency)? destinationCurrencyChanged,
+    TResult Function()? initialEmitted,
+    TResult Function()? exchangeTypeSwaped,
+    TResult Function(String criptoCurrency)? criptoCurrencyChanged,
+    TResult Function(String fiatCurrency)? fiatCurrencyChanged,
     TResult Function(double amount)? amountMoneyChanged,
+    TResult Function(String currency)? currencyMoneyChanged,
+    TResult Function()? getExchangeRates,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
-    required TResult Function(OriginCurrencyChangedEvent value)
-        originCurrencyChanged,
-    required TResult Function(DestinationCurrencyChangedEvent value)
-        destinationCurrencyChanged,
+    required TResult Function(InitialEmittedEvent value) initialEmitted,
+    required TResult Function(ExchangeTypeSwapedEvent value) exchangeTypeSwaped,
+    required TResult Function(CriptoCurrencyChangedEvent value)
+        criptoCurrencyChanged,
+    required TResult Function(FiatCurrencyChangedEvent value)
+        fiatCurrencyChanged,
     required TResult Function(AmountMoneyChangedEvent value) amountMoneyChanged,
+    required TResult Function(CurrencyMoneyChangedEvent value)
+        currencyMoneyChanged,
+    required TResult Function(GetExchangeRatesEvent value) getExchangeRates,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
-    TResult? Function(OriginCurrencyChangedEvent value)? originCurrencyChanged,
-    TResult? Function(DestinationCurrencyChangedEvent value)?
-        destinationCurrencyChanged,
+    TResult? Function(InitialEmittedEvent value)? initialEmitted,
+    TResult? Function(ExchangeTypeSwapedEvent value)? exchangeTypeSwaped,
+    TResult? Function(CriptoCurrencyChangedEvent value)? criptoCurrencyChanged,
+    TResult? Function(FiatCurrencyChangedEvent value)? fiatCurrencyChanged,
     TResult? Function(AmountMoneyChangedEvent value)? amountMoneyChanged,
+    TResult? Function(CurrencyMoneyChangedEvent value)? currencyMoneyChanged,
+    TResult? Function(GetExchangeRatesEvent value)? getExchangeRates,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
-    TResult Function(OriginCurrencyChangedEvent value)? originCurrencyChanged,
-    TResult Function(DestinationCurrencyChangedEvent value)?
-        destinationCurrencyChanged,
+    TResult Function(InitialEmittedEvent value)? initialEmitted,
+    TResult Function(ExchangeTypeSwapedEvent value)? exchangeTypeSwaped,
+    TResult Function(CriptoCurrencyChangedEvent value)? criptoCurrencyChanged,
+    TResult Function(FiatCurrencyChangedEvent value)? fiatCurrencyChanged,
     TResult Function(AmountMoneyChangedEvent value)? amountMoneyChanged,
+    TResult Function(CurrencyMoneyChangedEvent value)? currencyMoneyChanged,
+    TResult Function(GetExchangeRatesEvent value)? getExchangeRates,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -95,18 +111,18 @@ class _$ExchangeRateEventCopyWithImpl<$Res, $Val extends ExchangeRateEvent>
 }
 
 /// @nodoc
-abstract class _$$StartedImplCopyWith<$Res> {
-  factory _$$StartedImplCopyWith(
-          _$StartedImpl value, $Res Function(_$StartedImpl) then) =
-      __$$StartedImplCopyWithImpl<$Res>;
+abstract class _$$InitialEmittedEventImplCopyWith<$Res> {
+  factory _$$InitialEmittedEventImplCopyWith(_$InitialEmittedEventImpl value,
+          $Res Function(_$InitialEmittedEventImpl) then) =
+      __$$InitialEmittedEventImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$StartedImplCopyWithImpl<$Res>
-    extends _$ExchangeRateEventCopyWithImpl<$Res, _$StartedImpl>
-    implements _$$StartedImplCopyWith<$Res> {
-  __$$StartedImplCopyWithImpl(
-      _$StartedImpl _value, $Res Function(_$StartedImpl) _then)
+class __$$InitialEmittedEventImplCopyWithImpl<$Res>
+    extends _$ExchangeRateEventCopyWithImpl<$Res, _$InitialEmittedEventImpl>
+    implements _$$InitialEmittedEventImplCopyWith<$Res> {
+  __$$InitialEmittedEventImplCopyWithImpl(_$InitialEmittedEventImpl _value,
+      $Res Function(_$InitialEmittedEventImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of ExchangeRateEvent
@@ -115,18 +131,19 @@ class __$$StartedImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$StartedImpl implements _Started {
-  const _$StartedImpl();
+class _$InitialEmittedEventImpl implements InitialEmittedEvent {
+  const _$InitialEmittedEventImpl();
 
   @override
   String toString() {
-    return 'ExchangeRateEvent.started()';
+    return 'ExchangeRateEvent.initialEmitted()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$StartedImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$InitialEmittedEventImpl);
   }
 
   @override
@@ -135,37 +152,45 @@ class _$StartedImpl implements _Started {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
-    required TResult Function(String originCurrency) originCurrencyChanged,
-    required TResult Function(String destinationCurrency)
-        destinationCurrencyChanged,
+    required TResult Function() initialEmitted,
+    required TResult Function() exchangeTypeSwaped,
+    required TResult Function(String criptoCurrency) criptoCurrencyChanged,
+    required TResult Function(String fiatCurrency) fiatCurrencyChanged,
     required TResult Function(double amount) amountMoneyChanged,
+    required TResult Function(String currency) currencyMoneyChanged,
+    required TResult Function() getExchangeRates,
   }) {
-    return started();
+    return initialEmitted();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
-    TResult? Function(String originCurrency)? originCurrencyChanged,
-    TResult? Function(String destinationCurrency)? destinationCurrencyChanged,
+    TResult? Function()? initialEmitted,
+    TResult? Function()? exchangeTypeSwaped,
+    TResult? Function(String criptoCurrency)? criptoCurrencyChanged,
+    TResult? Function(String fiatCurrency)? fiatCurrencyChanged,
     TResult? Function(double amount)? amountMoneyChanged,
+    TResult? Function(String currency)? currencyMoneyChanged,
+    TResult? Function()? getExchangeRates,
   }) {
-    return started?.call();
+    return initialEmitted?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
-    TResult Function(String originCurrency)? originCurrencyChanged,
-    TResult Function(String destinationCurrency)? destinationCurrencyChanged,
+    TResult Function()? initialEmitted,
+    TResult Function()? exchangeTypeSwaped,
+    TResult Function(String criptoCurrency)? criptoCurrencyChanged,
+    TResult Function(String fiatCurrency)? fiatCurrencyChanged,
     TResult Function(double amount)? amountMoneyChanged,
+    TResult Function(String currency)? currencyMoneyChanged,
+    TResult Function()? getExchangeRates,
     required TResult orElse(),
   }) {
-    if (started != null) {
-      return started();
+    if (initialEmitted != null) {
+      return initialEmitted();
     }
     return orElse();
   }
@@ -173,67 +198,216 @@ class _$StartedImpl implements _Started {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
-    required TResult Function(OriginCurrencyChangedEvent value)
-        originCurrencyChanged,
-    required TResult Function(DestinationCurrencyChangedEvent value)
-        destinationCurrencyChanged,
+    required TResult Function(InitialEmittedEvent value) initialEmitted,
+    required TResult Function(ExchangeTypeSwapedEvent value) exchangeTypeSwaped,
+    required TResult Function(CriptoCurrencyChangedEvent value)
+        criptoCurrencyChanged,
+    required TResult Function(FiatCurrencyChangedEvent value)
+        fiatCurrencyChanged,
     required TResult Function(AmountMoneyChangedEvent value) amountMoneyChanged,
+    required TResult Function(CurrencyMoneyChangedEvent value)
+        currencyMoneyChanged,
+    required TResult Function(GetExchangeRatesEvent value) getExchangeRates,
   }) {
-    return started(this);
+    return initialEmitted(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
-    TResult? Function(OriginCurrencyChangedEvent value)? originCurrencyChanged,
-    TResult? Function(DestinationCurrencyChangedEvent value)?
-        destinationCurrencyChanged,
+    TResult? Function(InitialEmittedEvent value)? initialEmitted,
+    TResult? Function(ExchangeTypeSwapedEvent value)? exchangeTypeSwaped,
+    TResult? Function(CriptoCurrencyChangedEvent value)? criptoCurrencyChanged,
+    TResult? Function(FiatCurrencyChangedEvent value)? fiatCurrencyChanged,
     TResult? Function(AmountMoneyChangedEvent value)? amountMoneyChanged,
+    TResult? Function(CurrencyMoneyChangedEvent value)? currencyMoneyChanged,
+    TResult? Function(GetExchangeRatesEvent value)? getExchangeRates,
   }) {
-    return started?.call(this);
+    return initialEmitted?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
-    TResult Function(OriginCurrencyChangedEvent value)? originCurrencyChanged,
-    TResult Function(DestinationCurrencyChangedEvent value)?
-        destinationCurrencyChanged,
+    TResult Function(InitialEmittedEvent value)? initialEmitted,
+    TResult Function(ExchangeTypeSwapedEvent value)? exchangeTypeSwaped,
+    TResult Function(CriptoCurrencyChangedEvent value)? criptoCurrencyChanged,
+    TResult Function(FiatCurrencyChangedEvent value)? fiatCurrencyChanged,
     TResult Function(AmountMoneyChangedEvent value)? amountMoneyChanged,
+    TResult Function(CurrencyMoneyChangedEvent value)? currencyMoneyChanged,
+    TResult Function(GetExchangeRatesEvent value)? getExchangeRates,
     required TResult orElse(),
   }) {
-    if (started != null) {
-      return started(this);
+    if (initialEmitted != null) {
+      return initialEmitted(this);
     }
     return orElse();
   }
 }
 
-abstract class _Started implements ExchangeRateEvent {
-  const factory _Started() = _$StartedImpl;
+abstract class InitialEmittedEvent implements ExchangeRateEvent {
+  const factory InitialEmittedEvent() = _$InitialEmittedEventImpl;
 }
 
 /// @nodoc
-abstract class _$$OriginCurrencyChangedEventImplCopyWith<$Res> {
-  factory _$$OriginCurrencyChangedEventImplCopyWith(
-          _$OriginCurrencyChangedEventImpl value,
-          $Res Function(_$OriginCurrencyChangedEventImpl) then) =
-      __$$OriginCurrencyChangedEventImplCopyWithImpl<$Res>;
+abstract class _$$ExchangeTypeSwapedEventImplCopyWith<$Res> {
+  factory _$$ExchangeTypeSwapedEventImplCopyWith(
+          _$ExchangeTypeSwapedEventImpl value,
+          $Res Function(_$ExchangeTypeSwapedEventImpl) then) =
+      __$$ExchangeTypeSwapedEventImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ExchangeTypeSwapedEventImplCopyWithImpl<$Res>
+    extends _$ExchangeRateEventCopyWithImpl<$Res, _$ExchangeTypeSwapedEventImpl>
+    implements _$$ExchangeTypeSwapedEventImplCopyWith<$Res> {
+  __$$ExchangeTypeSwapedEventImplCopyWithImpl(
+      _$ExchangeTypeSwapedEventImpl _value,
+      $Res Function(_$ExchangeTypeSwapedEventImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ExchangeRateEvent
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$ExchangeTypeSwapedEventImpl implements ExchangeTypeSwapedEvent {
+  const _$ExchangeTypeSwapedEventImpl();
+
+  @override
+  String toString() {
+    return 'ExchangeRateEvent.exchangeTypeSwaped()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ExchangeTypeSwapedEventImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initialEmitted,
+    required TResult Function() exchangeTypeSwaped,
+    required TResult Function(String criptoCurrency) criptoCurrencyChanged,
+    required TResult Function(String fiatCurrency) fiatCurrencyChanged,
+    required TResult Function(double amount) amountMoneyChanged,
+    required TResult Function(String currency) currencyMoneyChanged,
+    required TResult Function() getExchangeRates,
+  }) {
+    return exchangeTypeSwaped();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initialEmitted,
+    TResult? Function()? exchangeTypeSwaped,
+    TResult? Function(String criptoCurrency)? criptoCurrencyChanged,
+    TResult? Function(String fiatCurrency)? fiatCurrencyChanged,
+    TResult? Function(double amount)? amountMoneyChanged,
+    TResult? Function(String currency)? currencyMoneyChanged,
+    TResult? Function()? getExchangeRates,
+  }) {
+    return exchangeTypeSwaped?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initialEmitted,
+    TResult Function()? exchangeTypeSwaped,
+    TResult Function(String criptoCurrency)? criptoCurrencyChanged,
+    TResult Function(String fiatCurrency)? fiatCurrencyChanged,
+    TResult Function(double amount)? amountMoneyChanged,
+    TResult Function(String currency)? currencyMoneyChanged,
+    TResult Function()? getExchangeRates,
+    required TResult orElse(),
+  }) {
+    if (exchangeTypeSwaped != null) {
+      return exchangeTypeSwaped();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(InitialEmittedEvent value) initialEmitted,
+    required TResult Function(ExchangeTypeSwapedEvent value) exchangeTypeSwaped,
+    required TResult Function(CriptoCurrencyChangedEvent value)
+        criptoCurrencyChanged,
+    required TResult Function(FiatCurrencyChangedEvent value)
+        fiatCurrencyChanged,
+    required TResult Function(AmountMoneyChangedEvent value) amountMoneyChanged,
+    required TResult Function(CurrencyMoneyChangedEvent value)
+        currencyMoneyChanged,
+    required TResult Function(GetExchangeRatesEvent value) getExchangeRates,
+  }) {
+    return exchangeTypeSwaped(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(InitialEmittedEvent value)? initialEmitted,
+    TResult? Function(ExchangeTypeSwapedEvent value)? exchangeTypeSwaped,
+    TResult? Function(CriptoCurrencyChangedEvent value)? criptoCurrencyChanged,
+    TResult? Function(FiatCurrencyChangedEvent value)? fiatCurrencyChanged,
+    TResult? Function(AmountMoneyChangedEvent value)? amountMoneyChanged,
+    TResult? Function(CurrencyMoneyChangedEvent value)? currencyMoneyChanged,
+    TResult? Function(GetExchangeRatesEvent value)? getExchangeRates,
+  }) {
+    return exchangeTypeSwaped?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(InitialEmittedEvent value)? initialEmitted,
+    TResult Function(ExchangeTypeSwapedEvent value)? exchangeTypeSwaped,
+    TResult Function(CriptoCurrencyChangedEvent value)? criptoCurrencyChanged,
+    TResult Function(FiatCurrencyChangedEvent value)? fiatCurrencyChanged,
+    TResult Function(AmountMoneyChangedEvent value)? amountMoneyChanged,
+    TResult Function(CurrencyMoneyChangedEvent value)? currencyMoneyChanged,
+    TResult Function(GetExchangeRatesEvent value)? getExchangeRates,
+    required TResult orElse(),
+  }) {
+    if (exchangeTypeSwaped != null) {
+      return exchangeTypeSwaped(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ExchangeTypeSwapedEvent implements ExchangeRateEvent {
+  const factory ExchangeTypeSwapedEvent() = _$ExchangeTypeSwapedEventImpl;
+}
+
+/// @nodoc
+abstract class _$$CriptoCurrencyChangedEventImplCopyWith<$Res> {
+  factory _$$CriptoCurrencyChangedEventImplCopyWith(
+          _$CriptoCurrencyChangedEventImpl value,
+          $Res Function(_$CriptoCurrencyChangedEventImpl) then) =
+      __$$CriptoCurrencyChangedEventImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({String originCurrency});
+  $Res call({String criptoCurrency});
 }
 
 /// @nodoc
-class __$$OriginCurrencyChangedEventImplCopyWithImpl<$Res>
+class __$$CriptoCurrencyChangedEventImplCopyWithImpl<$Res>
     extends _$ExchangeRateEventCopyWithImpl<$Res,
-        _$OriginCurrencyChangedEventImpl>
-    implements _$$OriginCurrencyChangedEventImplCopyWith<$Res> {
-  __$$OriginCurrencyChangedEventImplCopyWithImpl(
-      _$OriginCurrencyChangedEventImpl _value,
-      $Res Function(_$OriginCurrencyChangedEventImpl) _then)
+        _$CriptoCurrencyChangedEventImpl>
+    implements _$$CriptoCurrencyChangedEventImplCopyWith<$Res> {
+  __$$CriptoCurrencyChangedEventImplCopyWithImpl(
+      _$CriptoCurrencyChangedEventImpl _value,
+      $Res Function(_$CriptoCurrencyChangedEventImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of ExchangeRateEvent
@@ -241,12 +415,12 @@ class __$$OriginCurrencyChangedEventImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? originCurrency = null,
+    Object? criptoCurrency = null,
   }) {
-    return _then(_$OriginCurrencyChangedEventImpl(
-      originCurrency: null == originCurrency
-          ? _value.originCurrency
-          : originCurrency // ignore: cast_nullable_to_non_nullable
+    return _then(_$CriptoCurrencyChangedEventImpl(
+      criptoCurrency: null == criptoCurrency
+          ? _value.criptoCurrency
+          : criptoCurrency // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -254,72 +428,80 @@ class __$$OriginCurrencyChangedEventImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$OriginCurrencyChangedEventImpl implements OriginCurrencyChangedEvent {
-  const _$OriginCurrencyChangedEventImpl({required this.originCurrency});
+class _$CriptoCurrencyChangedEventImpl implements CriptoCurrencyChangedEvent {
+  const _$CriptoCurrencyChangedEventImpl({required this.criptoCurrency});
 
   @override
-  final String originCurrency;
+  final String criptoCurrency;
 
   @override
   String toString() {
-    return 'ExchangeRateEvent.originCurrencyChanged(originCurrency: $originCurrency)';
+    return 'ExchangeRateEvent.criptoCurrencyChanged(criptoCurrency: $criptoCurrency)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$OriginCurrencyChangedEventImpl &&
-            (identical(other.originCurrency, originCurrency) ||
-                other.originCurrency == originCurrency));
+            other is _$CriptoCurrencyChangedEventImpl &&
+            (identical(other.criptoCurrency, criptoCurrency) ||
+                other.criptoCurrency == criptoCurrency));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, originCurrency);
+  int get hashCode => Object.hash(runtimeType, criptoCurrency);
 
   /// Create a copy of ExchangeRateEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$OriginCurrencyChangedEventImplCopyWith<_$OriginCurrencyChangedEventImpl>
-      get copyWith => __$$OriginCurrencyChangedEventImplCopyWithImpl<
-          _$OriginCurrencyChangedEventImpl>(this, _$identity);
+  _$$CriptoCurrencyChangedEventImplCopyWith<_$CriptoCurrencyChangedEventImpl>
+      get copyWith => __$$CriptoCurrencyChangedEventImplCopyWithImpl<
+          _$CriptoCurrencyChangedEventImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
-    required TResult Function(String originCurrency) originCurrencyChanged,
-    required TResult Function(String destinationCurrency)
-        destinationCurrencyChanged,
+    required TResult Function() initialEmitted,
+    required TResult Function() exchangeTypeSwaped,
+    required TResult Function(String criptoCurrency) criptoCurrencyChanged,
+    required TResult Function(String fiatCurrency) fiatCurrencyChanged,
     required TResult Function(double amount) amountMoneyChanged,
+    required TResult Function(String currency) currencyMoneyChanged,
+    required TResult Function() getExchangeRates,
   }) {
-    return originCurrencyChanged(originCurrency);
+    return criptoCurrencyChanged(criptoCurrency);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
-    TResult? Function(String originCurrency)? originCurrencyChanged,
-    TResult? Function(String destinationCurrency)? destinationCurrencyChanged,
+    TResult? Function()? initialEmitted,
+    TResult? Function()? exchangeTypeSwaped,
+    TResult? Function(String criptoCurrency)? criptoCurrencyChanged,
+    TResult? Function(String fiatCurrency)? fiatCurrencyChanged,
     TResult? Function(double amount)? amountMoneyChanged,
+    TResult? Function(String currency)? currencyMoneyChanged,
+    TResult? Function()? getExchangeRates,
   }) {
-    return originCurrencyChanged?.call(originCurrency);
+    return criptoCurrencyChanged?.call(criptoCurrency);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
-    TResult Function(String originCurrency)? originCurrencyChanged,
-    TResult Function(String destinationCurrency)? destinationCurrencyChanged,
+    TResult Function()? initialEmitted,
+    TResult Function()? exchangeTypeSwaped,
+    TResult Function(String criptoCurrency)? criptoCurrencyChanged,
+    TResult Function(String fiatCurrency)? fiatCurrencyChanged,
     TResult Function(double amount)? amountMoneyChanged,
+    TResult Function(String currency)? currencyMoneyChanged,
+    TResult Function()? getExchangeRates,
     required TResult orElse(),
   }) {
-    if (originCurrencyChanged != null) {
-      return originCurrencyChanged(originCurrency);
+    if (criptoCurrencyChanged != null) {
+      return criptoCurrencyChanged(criptoCurrency);
     }
     return orElse();
   }
@@ -327,77 +509,85 @@ class _$OriginCurrencyChangedEventImpl implements OriginCurrencyChangedEvent {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
-    required TResult Function(OriginCurrencyChangedEvent value)
-        originCurrencyChanged,
-    required TResult Function(DestinationCurrencyChangedEvent value)
-        destinationCurrencyChanged,
+    required TResult Function(InitialEmittedEvent value) initialEmitted,
+    required TResult Function(ExchangeTypeSwapedEvent value) exchangeTypeSwaped,
+    required TResult Function(CriptoCurrencyChangedEvent value)
+        criptoCurrencyChanged,
+    required TResult Function(FiatCurrencyChangedEvent value)
+        fiatCurrencyChanged,
     required TResult Function(AmountMoneyChangedEvent value) amountMoneyChanged,
+    required TResult Function(CurrencyMoneyChangedEvent value)
+        currencyMoneyChanged,
+    required TResult Function(GetExchangeRatesEvent value) getExchangeRates,
   }) {
-    return originCurrencyChanged(this);
+    return criptoCurrencyChanged(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
-    TResult? Function(OriginCurrencyChangedEvent value)? originCurrencyChanged,
-    TResult? Function(DestinationCurrencyChangedEvent value)?
-        destinationCurrencyChanged,
+    TResult? Function(InitialEmittedEvent value)? initialEmitted,
+    TResult? Function(ExchangeTypeSwapedEvent value)? exchangeTypeSwaped,
+    TResult? Function(CriptoCurrencyChangedEvent value)? criptoCurrencyChanged,
+    TResult? Function(FiatCurrencyChangedEvent value)? fiatCurrencyChanged,
     TResult? Function(AmountMoneyChangedEvent value)? amountMoneyChanged,
+    TResult? Function(CurrencyMoneyChangedEvent value)? currencyMoneyChanged,
+    TResult? Function(GetExchangeRatesEvent value)? getExchangeRates,
   }) {
-    return originCurrencyChanged?.call(this);
+    return criptoCurrencyChanged?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
-    TResult Function(OriginCurrencyChangedEvent value)? originCurrencyChanged,
-    TResult Function(DestinationCurrencyChangedEvent value)?
-        destinationCurrencyChanged,
+    TResult Function(InitialEmittedEvent value)? initialEmitted,
+    TResult Function(ExchangeTypeSwapedEvent value)? exchangeTypeSwaped,
+    TResult Function(CriptoCurrencyChangedEvent value)? criptoCurrencyChanged,
+    TResult Function(FiatCurrencyChangedEvent value)? fiatCurrencyChanged,
     TResult Function(AmountMoneyChangedEvent value)? amountMoneyChanged,
+    TResult Function(CurrencyMoneyChangedEvent value)? currencyMoneyChanged,
+    TResult Function(GetExchangeRatesEvent value)? getExchangeRates,
     required TResult orElse(),
   }) {
-    if (originCurrencyChanged != null) {
-      return originCurrencyChanged(this);
+    if (criptoCurrencyChanged != null) {
+      return criptoCurrencyChanged(this);
     }
     return orElse();
   }
 }
 
-abstract class OriginCurrencyChangedEvent implements ExchangeRateEvent {
-  const factory OriginCurrencyChangedEvent(
-          {required final String originCurrency}) =
-      _$OriginCurrencyChangedEventImpl;
+abstract class CriptoCurrencyChangedEvent implements ExchangeRateEvent {
+  const factory CriptoCurrencyChangedEvent(
+          {required final String criptoCurrency}) =
+      _$CriptoCurrencyChangedEventImpl;
 
-  String get originCurrency;
+  String get criptoCurrency;
 
   /// Create a copy of ExchangeRateEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$OriginCurrencyChangedEventImplCopyWith<_$OriginCurrencyChangedEventImpl>
+  _$$CriptoCurrencyChangedEventImplCopyWith<_$CriptoCurrencyChangedEventImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$DestinationCurrencyChangedEventImplCopyWith<$Res> {
-  factory _$$DestinationCurrencyChangedEventImplCopyWith(
-          _$DestinationCurrencyChangedEventImpl value,
-          $Res Function(_$DestinationCurrencyChangedEventImpl) then) =
-      __$$DestinationCurrencyChangedEventImplCopyWithImpl<$Res>;
+abstract class _$$FiatCurrencyChangedEventImplCopyWith<$Res> {
+  factory _$$FiatCurrencyChangedEventImplCopyWith(
+          _$FiatCurrencyChangedEventImpl value,
+          $Res Function(_$FiatCurrencyChangedEventImpl) then) =
+      __$$FiatCurrencyChangedEventImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({String destinationCurrency});
+  $Res call({String fiatCurrency});
 }
 
 /// @nodoc
-class __$$DestinationCurrencyChangedEventImplCopyWithImpl<$Res>
+class __$$FiatCurrencyChangedEventImplCopyWithImpl<$Res>
     extends _$ExchangeRateEventCopyWithImpl<$Res,
-        _$DestinationCurrencyChangedEventImpl>
-    implements _$$DestinationCurrencyChangedEventImplCopyWith<$Res> {
-  __$$DestinationCurrencyChangedEventImplCopyWithImpl(
-      _$DestinationCurrencyChangedEventImpl _value,
-      $Res Function(_$DestinationCurrencyChangedEventImpl) _then)
+        _$FiatCurrencyChangedEventImpl>
+    implements _$$FiatCurrencyChangedEventImplCopyWith<$Res> {
+  __$$FiatCurrencyChangedEventImplCopyWithImpl(
+      _$FiatCurrencyChangedEventImpl _value,
+      $Res Function(_$FiatCurrencyChangedEventImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of ExchangeRateEvent
@@ -405,12 +595,12 @@ class __$$DestinationCurrencyChangedEventImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? destinationCurrency = null,
+    Object? fiatCurrency = null,
   }) {
-    return _then(_$DestinationCurrencyChangedEventImpl(
-      destinationCurrency: null == destinationCurrency
-          ? _value.destinationCurrency
-          : destinationCurrency // ignore: cast_nullable_to_non_nullable
+    return _then(_$FiatCurrencyChangedEventImpl(
+      fiatCurrency: null == fiatCurrency
+          ? _value.fiatCurrency
+          : fiatCurrency // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -418,75 +608,80 @@ class __$$DestinationCurrencyChangedEventImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$DestinationCurrencyChangedEventImpl
-    implements DestinationCurrencyChangedEvent {
-  const _$DestinationCurrencyChangedEventImpl(
-      {required this.destinationCurrency});
+class _$FiatCurrencyChangedEventImpl implements FiatCurrencyChangedEvent {
+  const _$FiatCurrencyChangedEventImpl({required this.fiatCurrency});
 
   @override
-  final String destinationCurrency;
+  final String fiatCurrency;
 
   @override
   String toString() {
-    return 'ExchangeRateEvent.destinationCurrencyChanged(destinationCurrency: $destinationCurrency)';
+    return 'ExchangeRateEvent.fiatCurrencyChanged(fiatCurrency: $fiatCurrency)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$DestinationCurrencyChangedEventImpl &&
-            (identical(other.destinationCurrency, destinationCurrency) ||
-                other.destinationCurrency == destinationCurrency));
+            other is _$FiatCurrencyChangedEventImpl &&
+            (identical(other.fiatCurrency, fiatCurrency) ||
+                other.fiatCurrency == fiatCurrency));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, destinationCurrency);
+  int get hashCode => Object.hash(runtimeType, fiatCurrency);
 
   /// Create a copy of ExchangeRateEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$DestinationCurrencyChangedEventImplCopyWith<
-          _$DestinationCurrencyChangedEventImpl>
-      get copyWith => __$$DestinationCurrencyChangedEventImplCopyWithImpl<
-          _$DestinationCurrencyChangedEventImpl>(this, _$identity);
+  _$$FiatCurrencyChangedEventImplCopyWith<_$FiatCurrencyChangedEventImpl>
+      get copyWith => __$$FiatCurrencyChangedEventImplCopyWithImpl<
+          _$FiatCurrencyChangedEventImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
-    required TResult Function(String originCurrency) originCurrencyChanged,
-    required TResult Function(String destinationCurrency)
-        destinationCurrencyChanged,
+    required TResult Function() initialEmitted,
+    required TResult Function() exchangeTypeSwaped,
+    required TResult Function(String criptoCurrency) criptoCurrencyChanged,
+    required TResult Function(String fiatCurrency) fiatCurrencyChanged,
     required TResult Function(double amount) amountMoneyChanged,
+    required TResult Function(String currency) currencyMoneyChanged,
+    required TResult Function() getExchangeRates,
   }) {
-    return destinationCurrencyChanged(destinationCurrency);
+    return fiatCurrencyChanged(fiatCurrency);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
-    TResult? Function(String originCurrency)? originCurrencyChanged,
-    TResult? Function(String destinationCurrency)? destinationCurrencyChanged,
+    TResult? Function()? initialEmitted,
+    TResult? Function()? exchangeTypeSwaped,
+    TResult? Function(String criptoCurrency)? criptoCurrencyChanged,
+    TResult? Function(String fiatCurrency)? fiatCurrencyChanged,
     TResult? Function(double amount)? amountMoneyChanged,
+    TResult? Function(String currency)? currencyMoneyChanged,
+    TResult? Function()? getExchangeRates,
   }) {
-    return destinationCurrencyChanged?.call(destinationCurrency);
+    return fiatCurrencyChanged?.call(fiatCurrency);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
-    TResult Function(String originCurrency)? originCurrencyChanged,
-    TResult Function(String destinationCurrency)? destinationCurrencyChanged,
+    TResult Function()? initialEmitted,
+    TResult Function()? exchangeTypeSwaped,
+    TResult Function(String criptoCurrency)? criptoCurrencyChanged,
+    TResult Function(String fiatCurrency)? fiatCurrencyChanged,
     TResult Function(double amount)? amountMoneyChanged,
+    TResult Function(String currency)? currencyMoneyChanged,
+    TResult Function()? getExchangeRates,
     required TResult orElse(),
   }) {
-    if (destinationCurrencyChanged != null) {
-      return destinationCurrencyChanged(destinationCurrency);
+    if (fiatCurrencyChanged != null) {
+      return fiatCurrencyChanged(fiatCurrency);
     }
     return orElse();
   }
@@ -494,57 +689,63 @@ class _$DestinationCurrencyChangedEventImpl
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
-    required TResult Function(OriginCurrencyChangedEvent value)
-        originCurrencyChanged,
-    required TResult Function(DestinationCurrencyChangedEvent value)
-        destinationCurrencyChanged,
+    required TResult Function(InitialEmittedEvent value) initialEmitted,
+    required TResult Function(ExchangeTypeSwapedEvent value) exchangeTypeSwaped,
+    required TResult Function(CriptoCurrencyChangedEvent value)
+        criptoCurrencyChanged,
+    required TResult Function(FiatCurrencyChangedEvent value)
+        fiatCurrencyChanged,
     required TResult Function(AmountMoneyChangedEvent value) amountMoneyChanged,
+    required TResult Function(CurrencyMoneyChangedEvent value)
+        currencyMoneyChanged,
+    required TResult Function(GetExchangeRatesEvent value) getExchangeRates,
   }) {
-    return destinationCurrencyChanged(this);
+    return fiatCurrencyChanged(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
-    TResult? Function(OriginCurrencyChangedEvent value)? originCurrencyChanged,
-    TResult? Function(DestinationCurrencyChangedEvent value)?
-        destinationCurrencyChanged,
+    TResult? Function(InitialEmittedEvent value)? initialEmitted,
+    TResult? Function(ExchangeTypeSwapedEvent value)? exchangeTypeSwaped,
+    TResult? Function(CriptoCurrencyChangedEvent value)? criptoCurrencyChanged,
+    TResult? Function(FiatCurrencyChangedEvent value)? fiatCurrencyChanged,
     TResult? Function(AmountMoneyChangedEvent value)? amountMoneyChanged,
+    TResult? Function(CurrencyMoneyChangedEvent value)? currencyMoneyChanged,
+    TResult? Function(GetExchangeRatesEvent value)? getExchangeRates,
   }) {
-    return destinationCurrencyChanged?.call(this);
+    return fiatCurrencyChanged?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
-    TResult Function(OriginCurrencyChangedEvent value)? originCurrencyChanged,
-    TResult Function(DestinationCurrencyChangedEvent value)?
-        destinationCurrencyChanged,
+    TResult Function(InitialEmittedEvent value)? initialEmitted,
+    TResult Function(ExchangeTypeSwapedEvent value)? exchangeTypeSwaped,
+    TResult Function(CriptoCurrencyChangedEvent value)? criptoCurrencyChanged,
+    TResult Function(FiatCurrencyChangedEvent value)? fiatCurrencyChanged,
     TResult Function(AmountMoneyChangedEvent value)? amountMoneyChanged,
+    TResult Function(CurrencyMoneyChangedEvent value)? currencyMoneyChanged,
+    TResult Function(GetExchangeRatesEvent value)? getExchangeRates,
     required TResult orElse(),
   }) {
-    if (destinationCurrencyChanged != null) {
-      return destinationCurrencyChanged(this);
+    if (fiatCurrencyChanged != null) {
+      return fiatCurrencyChanged(this);
     }
     return orElse();
   }
 }
 
-abstract class DestinationCurrencyChangedEvent implements ExchangeRateEvent {
-  const factory DestinationCurrencyChangedEvent(
-          {required final String destinationCurrency}) =
-      _$DestinationCurrencyChangedEventImpl;
+abstract class FiatCurrencyChangedEvent implements ExchangeRateEvent {
+  const factory FiatCurrencyChangedEvent({required final String fiatCurrency}) =
+      _$FiatCurrencyChangedEventImpl;
 
-  String get destinationCurrency;
+  String get fiatCurrency;
 
   /// Create a copy of ExchangeRateEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$DestinationCurrencyChangedEventImplCopyWith<
-          _$DestinationCurrencyChangedEventImpl>
+  _$$FiatCurrencyChangedEventImplCopyWith<_$FiatCurrencyChangedEventImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -619,11 +820,13 @@ class _$AmountMoneyChangedEventImpl implements AmountMoneyChangedEvent {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
-    required TResult Function(String originCurrency) originCurrencyChanged,
-    required TResult Function(String destinationCurrency)
-        destinationCurrencyChanged,
+    required TResult Function() initialEmitted,
+    required TResult Function() exchangeTypeSwaped,
+    required TResult Function(String criptoCurrency) criptoCurrencyChanged,
+    required TResult Function(String fiatCurrency) fiatCurrencyChanged,
     required TResult Function(double amount) amountMoneyChanged,
+    required TResult Function(String currency) currencyMoneyChanged,
+    required TResult Function() getExchangeRates,
   }) {
     return amountMoneyChanged(amount);
   }
@@ -631,10 +834,13 @@ class _$AmountMoneyChangedEventImpl implements AmountMoneyChangedEvent {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
-    TResult? Function(String originCurrency)? originCurrencyChanged,
-    TResult? Function(String destinationCurrency)? destinationCurrencyChanged,
+    TResult? Function()? initialEmitted,
+    TResult? Function()? exchangeTypeSwaped,
+    TResult? Function(String criptoCurrency)? criptoCurrencyChanged,
+    TResult? Function(String fiatCurrency)? fiatCurrencyChanged,
     TResult? Function(double amount)? amountMoneyChanged,
+    TResult? Function(String currency)? currencyMoneyChanged,
+    TResult? Function()? getExchangeRates,
   }) {
     return amountMoneyChanged?.call(amount);
   }
@@ -642,10 +848,13 @@ class _$AmountMoneyChangedEventImpl implements AmountMoneyChangedEvent {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
-    TResult Function(String originCurrency)? originCurrencyChanged,
-    TResult Function(String destinationCurrency)? destinationCurrencyChanged,
+    TResult Function()? initialEmitted,
+    TResult Function()? exchangeTypeSwaped,
+    TResult Function(String criptoCurrency)? criptoCurrencyChanged,
+    TResult Function(String fiatCurrency)? fiatCurrencyChanged,
     TResult Function(double amount)? amountMoneyChanged,
+    TResult Function(String currency)? currencyMoneyChanged,
+    TResult Function()? getExchangeRates,
     required TResult orElse(),
   }) {
     if (amountMoneyChanged != null) {
@@ -657,12 +866,16 @@ class _$AmountMoneyChangedEventImpl implements AmountMoneyChangedEvent {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
-    required TResult Function(OriginCurrencyChangedEvent value)
-        originCurrencyChanged,
-    required TResult Function(DestinationCurrencyChangedEvent value)
-        destinationCurrencyChanged,
+    required TResult Function(InitialEmittedEvent value) initialEmitted,
+    required TResult Function(ExchangeTypeSwapedEvent value) exchangeTypeSwaped,
+    required TResult Function(CriptoCurrencyChangedEvent value)
+        criptoCurrencyChanged,
+    required TResult Function(FiatCurrencyChangedEvent value)
+        fiatCurrencyChanged,
     required TResult Function(AmountMoneyChangedEvent value) amountMoneyChanged,
+    required TResult Function(CurrencyMoneyChangedEvent value)
+        currencyMoneyChanged,
+    required TResult Function(GetExchangeRatesEvent value) getExchangeRates,
   }) {
     return amountMoneyChanged(this);
   }
@@ -670,11 +883,13 @@ class _$AmountMoneyChangedEventImpl implements AmountMoneyChangedEvent {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
-    TResult? Function(OriginCurrencyChangedEvent value)? originCurrencyChanged,
-    TResult? Function(DestinationCurrencyChangedEvent value)?
-        destinationCurrencyChanged,
+    TResult? Function(InitialEmittedEvent value)? initialEmitted,
+    TResult? Function(ExchangeTypeSwapedEvent value)? exchangeTypeSwaped,
+    TResult? Function(CriptoCurrencyChangedEvent value)? criptoCurrencyChanged,
+    TResult? Function(FiatCurrencyChangedEvent value)? fiatCurrencyChanged,
     TResult? Function(AmountMoneyChangedEvent value)? amountMoneyChanged,
+    TResult? Function(CurrencyMoneyChangedEvent value)? currencyMoneyChanged,
+    TResult? Function(GetExchangeRatesEvent value)? getExchangeRates,
   }) {
     return amountMoneyChanged?.call(this);
   }
@@ -682,11 +897,13 @@ class _$AmountMoneyChangedEventImpl implements AmountMoneyChangedEvent {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
-    TResult Function(OriginCurrencyChangedEvent value)? originCurrencyChanged,
-    TResult Function(DestinationCurrencyChangedEvent value)?
-        destinationCurrencyChanged,
+    TResult Function(InitialEmittedEvent value)? initialEmitted,
+    TResult Function(ExchangeTypeSwapedEvent value)? exchangeTypeSwaped,
+    TResult Function(CriptoCurrencyChangedEvent value)? criptoCurrencyChanged,
+    TResult Function(FiatCurrencyChangedEvent value)? fiatCurrencyChanged,
     TResult Function(AmountMoneyChangedEvent value)? amountMoneyChanged,
+    TResult Function(CurrencyMoneyChangedEvent value)? currencyMoneyChanged,
+    TResult Function(GetExchangeRatesEvent value)? getExchangeRates,
     required TResult orElse(),
   }) {
     if (amountMoneyChanged != null) {
@@ -710,12 +927,334 @@ abstract class AmountMoneyChangedEvent implements ExchangeRateEvent {
 }
 
 /// @nodoc
+abstract class _$$CurrencyMoneyChangedEventImplCopyWith<$Res> {
+  factory _$$CurrencyMoneyChangedEventImplCopyWith(
+          _$CurrencyMoneyChangedEventImpl value,
+          $Res Function(_$CurrencyMoneyChangedEventImpl) then) =
+      __$$CurrencyMoneyChangedEventImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String currency});
+}
+
+/// @nodoc
+class __$$CurrencyMoneyChangedEventImplCopyWithImpl<$Res>
+    extends _$ExchangeRateEventCopyWithImpl<$Res,
+        _$CurrencyMoneyChangedEventImpl>
+    implements _$$CurrencyMoneyChangedEventImplCopyWith<$Res> {
+  __$$CurrencyMoneyChangedEventImplCopyWithImpl(
+      _$CurrencyMoneyChangedEventImpl _value,
+      $Res Function(_$CurrencyMoneyChangedEventImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ExchangeRateEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? currency = null,
+  }) {
+    return _then(_$CurrencyMoneyChangedEventImpl(
+      currency: null == currency
+          ? _value.currency
+          : currency // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$CurrencyMoneyChangedEventImpl implements CurrencyMoneyChangedEvent {
+  const _$CurrencyMoneyChangedEventImpl({required this.currency});
+
+  @override
+  final String currency;
+
+  @override
+  String toString() {
+    return 'ExchangeRateEvent.currencyMoneyChanged(currency: $currency)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CurrencyMoneyChangedEventImpl &&
+            (identical(other.currency, currency) ||
+                other.currency == currency));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, currency);
+
+  /// Create a copy of ExchangeRateEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CurrencyMoneyChangedEventImplCopyWith<_$CurrencyMoneyChangedEventImpl>
+      get copyWith => __$$CurrencyMoneyChangedEventImplCopyWithImpl<
+          _$CurrencyMoneyChangedEventImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initialEmitted,
+    required TResult Function() exchangeTypeSwaped,
+    required TResult Function(String criptoCurrency) criptoCurrencyChanged,
+    required TResult Function(String fiatCurrency) fiatCurrencyChanged,
+    required TResult Function(double amount) amountMoneyChanged,
+    required TResult Function(String currency) currencyMoneyChanged,
+    required TResult Function() getExchangeRates,
+  }) {
+    return currencyMoneyChanged(currency);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initialEmitted,
+    TResult? Function()? exchangeTypeSwaped,
+    TResult? Function(String criptoCurrency)? criptoCurrencyChanged,
+    TResult? Function(String fiatCurrency)? fiatCurrencyChanged,
+    TResult? Function(double amount)? amountMoneyChanged,
+    TResult? Function(String currency)? currencyMoneyChanged,
+    TResult? Function()? getExchangeRates,
+  }) {
+    return currencyMoneyChanged?.call(currency);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initialEmitted,
+    TResult Function()? exchangeTypeSwaped,
+    TResult Function(String criptoCurrency)? criptoCurrencyChanged,
+    TResult Function(String fiatCurrency)? fiatCurrencyChanged,
+    TResult Function(double amount)? amountMoneyChanged,
+    TResult Function(String currency)? currencyMoneyChanged,
+    TResult Function()? getExchangeRates,
+    required TResult orElse(),
+  }) {
+    if (currencyMoneyChanged != null) {
+      return currencyMoneyChanged(currency);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(InitialEmittedEvent value) initialEmitted,
+    required TResult Function(ExchangeTypeSwapedEvent value) exchangeTypeSwaped,
+    required TResult Function(CriptoCurrencyChangedEvent value)
+        criptoCurrencyChanged,
+    required TResult Function(FiatCurrencyChangedEvent value)
+        fiatCurrencyChanged,
+    required TResult Function(AmountMoneyChangedEvent value) amountMoneyChanged,
+    required TResult Function(CurrencyMoneyChangedEvent value)
+        currencyMoneyChanged,
+    required TResult Function(GetExchangeRatesEvent value) getExchangeRates,
+  }) {
+    return currencyMoneyChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(InitialEmittedEvent value)? initialEmitted,
+    TResult? Function(ExchangeTypeSwapedEvent value)? exchangeTypeSwaped,
+    TResult? Function(CriptoCurrencyChangedEvent value)? criptoCurrencyChanged,
+    TResult? Function(FiatCurrencyChangedEvent value)? fiatCurrencyChanged,
+    TResult? Function(AmountMoneyChangedEvent value)? amountMoneyChanged,
+    TResult? Function(CurrencyMoneyChangedEvent value)? currencyMoneyChanged,
+    TResult? Function(GetExchangeRatesEvent value)? getExchangeRates,
+  }) {
+    return currencyMoneyChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(InitialEmittedEvent value)? initialEmitted,
+    TResult Function(ExchangeTypeSwapedEvent value)? exchangeTypeSwaped,
+    TResult Function(CriptoCurrencyChangedEvent value)? criptoCurrencyChanged,
+    TResult Function(FiatCurrencyChangedEvent value)? fiatCurrencyChanged,
+    TResult Function(AmountMoneyChangedEvent value)? amountMoneyChanged,
+    TResult Function(CurrencyMoneyChangedEvent value)? currencyMoneyChanged,
+    TResult Function(GetExchangeRatesEvent value)? getExchangeRates,
+    required TResult orElse(),
+  }) {
+    if (currencyMoneyChanged != null) {
+      return currencyMoneyChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CurrencyMoneyChangedEvent implements ExchangeRateEvent {
+  const factory CurrencyMoneyChangedEvent({required final String currency}) =
+      _$CurrencyMoneyChangedEventImpl;
+
+  String get currency;
+
+  /// Create a copy of ExchangeRateEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$CurrencyMoneyChangedEventImplCopyWith<_$CurrencyMoneyChangedEventImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GetExchangeRatesEventImplCopyWith<$Res> {
+  factory _$$GetExchangeRatesEventImplCopyWith(
+          _$GetExchangeRatesEventImpl value,
+          $Res Function(_$GetExchangeRatesEventImpl) then) =
+      __$$GetExchangeRatesEventImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$GetExchangeRatesEventImplCopyWithImpl<$Res>
+    extends _$ExchangeRateEventCopyWithImpl<$Res, _$GetExchangeRatesEventImpl>
+    implements _$$GetExchangeRatesEventImplCopyWith<$Res> {
+  __$$GetExchangeRatesEventImplCopyWithImpl(_$GetExchangeRatesEventImpl _value,
+      $Res Function(_$GetExchangeRatesEventImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ExchangeRateEvent
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$GetExchangeRatesEventImpl implements GetExchangeRatesEvent {
+  const _$GetExchangeRatesEventImpl();
+
+  @override
+  String toString() {
+    return 'ExchangeRateEvent.getExchangeRates()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetExchangeRatesEventImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initialEmitted,
+    required TResult Function() exchangeTypeSwaped,
+    required TResult Function(String criptoCurrency) criptoCurrencyChanged,
+    required TResult Function(String fiatCurrency) fiatCurrencyChanged,
+    required TResult Function(double amount) amountMoneyChanged,
+    required TResult Function(String currency) currencyMoneyChanged,
+    required TResult Function() getExchangeRates,
+  }) {
+    return getExchangeRates();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initialEmitted,
+    TResult? Function()? exchangeTypeSwaped,
+    TResult? Function(String criptoCurrency)? criptoCurrencyChanged,
+    TResult? Function(String fiatCurrency)? fiatCurrencyChanged,
+    TResult? Function(double amount)? amountMoneyChanged,
+    TResult? Function(String currency)? currencyMoneyChanged,
+    TResult? Function()? getExchangeRates,
+  }) {
+    return getExchangeRates?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initialEmitted,
+    TResult Function()? exchangeTypeSwaped,
+    TResult Function(String criptoCurrency)? criptoCurrencyChanged,
+    TResult Function(String fiatCurrency)? fiatCurrencyChanged,
+    TResult Function(double amount)? amountMoneyChanged,
+    TResult Function(String currency)? currencyMoneyChanged,
+    TResult Function()? getExchangeRates,
+    required TResult orElse(),
+  }) {
+    if (getExchangeRates != null) {
+      return getExchangeRates();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(InitialEmittedEvent value) initialEmitted,
+    required TResult Function(ExchangeTypeSwapedEvent value) exchangeTypeSwaped,
+    required TResult Function(CriptoCurrencyChangedEvent value)
+        criptoCurrencyChanged,
+    required TResult Function(FiatCurrencyChangedEvent value)
+        fiatCurrencyChanged,
+    required TResult Function(AmountMoneyChangedEvent value) amountMoneyChanged,
+    required TResult Function(CurrencyMoneyChangedEvent value)
+        currencyMoneyChanged,
+    required TResult Function(GetExchangeRatesEvent value) getExchangeRates,
+  }) {
+    return getExchangeRates(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(InitialEmittedEvent value)? initialEmitted,
+    TResult? Function(ExchangeTypeSwapedEvent value)? exchangeTypeSwaped,
+    TResult? Function(CriptoCurrencyChangedEvent value)? criptoCurrencyChanged,
+    TResult? Function(FiatCurrencyChangedEvent value)? fiatCurrencyChanged,
+    TResult? Function(AmountMoneyChangedEvent value)? amountMoneyChanged,
+    TResult? Function(CurrencyMoneyChangedEvent value)? currencyMoneyChanged,
+    TResult? Function(GetExchangeRatesEvent value)? getExchangeRates,
+  }) {
+    return getExchangeRates?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(InitialEmittedEvent value)? initialEmitted,
+    TResult Function(ExchangeTypeSwapedEvent value)? exchangeTypeSwaped,
+    TResult Function(CriptoCurrencyChangedEvent value)? criptoCurrencyChanged,
+    TResult Function(FiatCurrencyChangedEvent value)? fiatCurrencyChanged,
+    TResult Function(AmountMoneyChangedEvent value)? amountMoneyChanged,
+    TResult Function(CurrencyMoneyChangedEvent value)? currencyMoneyChanged,
+    TResult Function(GetExchangeRatesEvent value)? getExchangeRates,
+    required TResult orElse(),
+  }) {
+    if (getExchangeRates != null) {
+      return getExchangeRates(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetExchangeRatesEvent implements ExchangeRateEvent {
+  const factory GetExchangeRatesEvent() = _$GetExchangeRatesEventImpl;
+}
+
+/// @nodoc
 mixin _$ExchangeRateState {
-  Option<String> get originCurrency => throw _privateConstructorUsedError;
-  Option<String> get destinationCurrency => throw _privateConstructorUsedError;
+  String get criptoCurrency => throw _privateConstructorUsedError;
+  String get fiatCurrency => throw _privateConstructorUsedError;
   Money get money => throw _privateConstructorUsedError;
   bool get isLoading => throw _privateConstructorUsedError;
   ExchangeType get exchangeType => throw _privateConstructorUsedError;
+  double get fiatToCryptoExchangeRate => throw _privateConstructorUsedError;
+  TextEditingControllerManager get controllerManager =>
+      throw _privateConstructorUsedError;
 
   /// Create a copy of ExchangeRateState
   /// with the given fields replaced by the non-null parameter values.
@@ -731,11 +1270,13 @@ abstract class $ExchangeRateStateCopyWith<$Res> {
       _$ExchangeRateStateCopyWithImpl<$Res, ExchangeRateState>;
   @useResult
   $Res call(
-      {Option<String> originCurrency,
-      Option<String> destinationCurrency,
+      {String criptoCurrency,
+      String fiatCurrency,
       Money money,
       bool isLoading,
-      ExchangeType exchangeType});
+      ExchangeType exchangeType,
+      double fiatToCryptoExchangeRate,
+      TextEditingControllerManager controllerManager});
 }
 
 /// @nodoc
@@ -753,21 +1294,23 @@ class _$ExchangeRateStateCopyWithImpl<$Res, $Val extends ExchangeRateState>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? originCurrency = null,
-    Object? destinationCurrency = null,
+    Object? criptoCurrency = null,
+    Object? fiatCurrency = null,
     Object? money = null,
     Object? isLoading = null,
     Object? exchangeType = null,
+    Object? fiatToCryptoExchangeRate = null,
+    Object? controllerManager = null,
   }) {
     return _then(_value.copyWith(
-      originCurrency: null == originCurrency
-          ? _value.originCurrency
-          : originCurrency // ignore: cast_nullable_to_non_nullable
-              as Option<String>,
-      destinationCurrency: null == destinationCurrency
-          ? _value.destinationCurrency
-          : destinationCurrency // ignore: cast_nullable_to_non_nullable
-              as Option<String>,
+      criptoCurrency: null == criptoCurrency
+          ? _value.criptoCurrency
+          : criptoCurrency // ignore: cast_nullable_to_non_nullable
+              as String,
+      fiatCurrency: null == fiatCurrency
+          ? _value.fiatCurrency
+          : fiatCurrency // ignore: cast_nullable_to_non_nullable
+              as String,
       money: null == money
           ? _value.money
           : money // ignore: cast_nullable_to_non_nullable
@@ -780,6 +1323,14 @@ class _$ExchangeRateStateCopyWithImpl<$Res, $Val extends ExchangeRateState>
           ? _value.exchangeType
           : exchangeType // ignore: cast_nullable_to_non_nullable
               as ExchangeType,
+      fiatToCryptoExchangeRate: null == fiatToCryptoExchangeRate
+          ? _value.fiatToCryptoExchangeRate
+          : fiatToCryptoExchangeRate // ignore: cast_nullable_to_non_nullable
+              as double,
+      controllerManager: null == controllerManager
+          ? _value.controllerManager
+          : controllerManager // ignore: cast_nullable_to_non_nullable
+              as TextEditingControllerManager,
     ) as $Val);
   }
 }
@@ -793,11 +1344,13 @@ abstract class _$$ExchangeRateStateImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Option<String> originCurrency,
-      Option<String> destinationCurrency,
+      {String criptoCurrency,
+      String fiatCurrency,
       Money money,
       bool isLoading,
-      ExchangeType exchangeType});
+      ExchangeType exchangeType,
+      double fiatToCryptoExchangeRate,
+      TextEditingControllerManager controllerManager});
 }
 
 /// @nodoc
@@ -813,21 +1366,23 @@ class __$$ExchangeRateStateImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? originCurrency = null,
-    Object? destinationCurrency = null,
+    Object? criptoCurrency = null,
+    Object? fiatCurrency = null,
     Object? money = null,
     Object? isLoading = null,
     Object? exchangeType = null,
+    Object? fiatToCryptoExchangeRate = null,
+    Object? controllerManager = null,
   }) {
     return _then(_$ExchangeRateStateImpl(
-      originCurrency: null == originCurrency
-          ? _value.originCurrency
-          : originCurrency // ignore: cast_nullable_to_non_nullable
-              as Option<String>,
-      destinationCurrency: null == destinationCurrency
-          ? _value.destinationCurrency
-          : destinationCurrency // ignore: cast_nullable_to_non_nullable
-              as Option<String>,
+      criptoCurrency: null == criptoCurrency
+          ? _value.criptoCurrency
+          : criptoCurrency // ignore: cast_nullable_to_non_nullable
+              as String,
+      fiatCurrency: null == fiatCurrency
+          ? _value.fiatCurrency
+          : fiatCurrency // ignore: cast_nullable_to_non_nullable
+              as String,
       money: null == money
           ? _value.money
           : money // ignore: cast_nullable_to_non_nullable
@@ -840,6 +1395,14 @@ class __$$ExchangeRateStateImplCopyWithImpl<$Res>
           ? _value.exchangeType
           : exchangeType // ignore: cast_nullable_to_non_nullable
               as ExchangeType,
+      fiatToCryptoExchangeRate: null == fiatToCryptoExchangeRate
+          ? _value.fiatToCryptoExchangeRate
+          : fiatToCryptoExchangeRate // ignore: cast_nullable_to_non_nullable
+              as double,
+      controllerManager: null == controllerManager
+          ? _value.controllerManager
+          : controllerManager // ignore: cast_nullable_to_non_nullable
+              as TextEditingControllerManager,
     ));
   }
 }
@@ -848,27 +1411,33 @@ class __$$ExchangeRateStateImplCopyWithImpl<$Res>
 
 class _$ExchangeRateStateImpl extends _ExchangeRateState {
   const _$ExchangeRateStateImpl(
-      {required this.originCurrency,
-      required this.destinationCurrency,
+      {required this.criptoCurrency,
+      required this.fiatCurrency,
       required this.money,
       required this.isLoading,
-      required this.exchangeType})
+      required this.exchangeType,
+      required this.fiatToCryptoExchangeRate,
+      required this.controllerManager})
       : super._();
 
   @override
-  final Option<String> originCurrency;
+  final String criptoCurrency;
   @override
-  final Option<String> destinationCurrency;
+  final String fiatCurrency;
   @override
   final Money money;
   @override
   final bool isLoading;
   @override
   final ExchangeType exchangeType;
+  @override
+  final double fiatToCryptoExchangeRate;
+  @override
+  final TextEditingControllerManager controllerManager;
 
   @override
   String toString() {
-    return 'ExchangeRateState(originCurrency: $originCurrency, destinationCurrency: $destinationCurrency, money: $money, isLoading: $isLoading, exchangeType: $exchangeType)';
+    return 'ExchangeRateState(criptoCurrency: $criptoCurrency, fiatCurrency: $fiatCurrency, money: $money, isLoading: $isLoading, exchangeType: $exchangeType, fiatToCryptoExchangeRate: $fiatToCryptoExchangeRate, controllerManager: $controllerManager)';
   }
 
   @override
@@ -876,20 +1445,32 @@ class _$ExchangeRateStateImpl extends _ExchangeRateState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ExchangeRateStateImpl &&
-            (identical(other.originCurrency, originCurrency) ||
-                other.originCurrency == originCurrency) &&
-            (identical(other.destinationCurrency, destinationCurrency) ||
-                other.destinationCurrency == destinationCurrency) &&
+            (identical(other.criptoCurrency, criptoCurrency) ||
+                other.criptoCurrency == criptoCurrency) &&
+            (identical(other.fiatCurrency, fiatCurrency) ||
+                other.fiatCurrency == fiatCurrency) &&
             (identical(other.money, money) || other.money == money) &&
             (identical(other.isLoading, isLoading) ||
                 other.isLoading == isLoading) &&
             (identical(other.exchangeType, exchangeType) ||
-                other.exchangeType == exchangeType));
+                other.exchangeType == exchangeType) &&
+            (identical(
+                    other.fiatToCryptoExchangeRate, fiatToCryptoExchangeRate) ||
+                other.fiatToCryptoExchangeRate == fiatToCryptoExchangeRate) &&
+            (identical(other.controllerManager, controllerManager) ||
+                other.controllerManager == controllerManager));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, originCurrency,
-      destinationCurrency, money, isLoading, exchangeType);
+  int get hashCode => Object.hash(
+      runtimeType,
+      criptoCurrency,
+      fiatCurrency,
+      money,
+      isLoading,
+      exchangeType,
+      fiatToCryptoExchangeRate,
+      controllerManager);
 
   /// Create a copy of ExchangeRateState
   /// with the given fields replaced by the non-null parameter values.
@@ -903,23 +1484,30 @@ class _$ExchangeRateStateImpl extends _ExchangeRateState {
 
 abstract class _ExchangeRateState extends ExchangeRateState {
   const factory _ExchangeRateState(
-      {required final Option<String> originCurrency,
-      required final Option<String> destinationCurrency,
-      required final Money money,
-      required final bool isLoading,
-      required final ExchangeType exchangeType}) = _$ExchangeRateStateImpl;
+          {required final String criptoCurrency,
+          required final String fiatCurrency,
+          required final Money money,
+          required final bool isLoading,
+          required final ExchangeType exchangeType,
+          required final double fiatToCryptoExchangeRate,
+          required final TextEditingControllerManager controllerManager}) =
+      _$ExchangeRateStateImpl;
   const _ExchangeRateState._() : super._();
 
   @override
-  Option<String> get originCurrency;
+  String get criptoCurrency;
   @override
-  Option<String> get destinationCurrency;
+  String get fiatCurrency;
   @override
   Money get money;
   @override
   bool get isLoading;
   @override
   ExchangeType get exchangeType;
+  @override
+  double get fiatToCryptoExchangeRate;
+  @override
+  TextEditingControllerManager get controllerManager;
 
   /// Create a copy of ExchangeRateState
   /// with the given fields replaced by the non-null parameter values.

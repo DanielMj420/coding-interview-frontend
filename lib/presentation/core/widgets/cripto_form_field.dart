@@ -61,6 +61,7 @@ class CustomCriptoFormField extends StatelessWidget {
                 FilteringTextInputFormatter.allow(RegExp(r'[0-9.]')),
               ],
               decoration: InputDecoration(
+                hintText: "0.00",
                 contentPadding: EdgeInsets.only(top: 0, left: 0.w, bottom: 9.h),
               ),
             ),

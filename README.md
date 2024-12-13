@@ -12,7 +12,7 @@ Acá tienes todos los assets que necesitas para llevar a cabo una pequeña prueb
 - URL: https://74j6q7lg6a.execute-api.eu-west-1.amazonaws.com/stage/orderbook/public/recommendations
 - Query Params:
   - `type`: 0 -> Cambio de CRYPTO a FIAT, 1 -> Cambio de FIAT a CRYPTO
-  - `cryptoCurrencyId`: La moneda crypto (el ID está en el nombre del asset)
+  - `criptoCurrencyId`: La moneda cripto (el ID está en el nombre del asset)
   - `fiatCurrencyId`: La moneda fiat (el ID está en el nombre del asset)
   - `amount`: Cantidad a cambiar
   - `amountCurrencyId`: La moneda en la que está del input

@@ -26,7 +26,7 @@ class Money extends ValueObject<Map<String, dynamic>> {
   factory Money.empty() => Money(amount: 0, currency: 'COP');
 
   Money copyWith({double? amount, String? currency}) {
-    final currentValue = value.getOrElse(() => {'amount': 0, 'currency': ''});
+    final currentValue = value.getOrElse(() => {'amount': 0.0, 'currency': ''});
     return Money(
       amount: amount ?? currentValue['amount'] as double,
       currency: currency ?? currentValue['currency'] as String,
