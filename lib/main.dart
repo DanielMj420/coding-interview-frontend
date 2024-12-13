@@ -1,3 +1,4 @@
+import 'package:coding_interview_frontend/aplication/injection/injection_container.dart';
 import 'package:coding_interview_frontend/presentation/core/cripto_calculator_app.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
@@ -5,8 +6,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
   await _initEnvFile('.env');
+
   await _initScreenUtil();
+
+  injectDependencies();
 
   runApp(const CriptoCalculatorApp());
 }

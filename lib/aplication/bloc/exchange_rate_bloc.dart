@@ -3,11 +3,13 @@ import 'package:coding_interview_frontend/domain/core/value_objects/money.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:injectable/injectable.dart';
 
 part 'exchange_rate_event.dart';
 part 'exchange_rate_state.dart';
 part 'exchange_rate_bloc.freezed.dart';
 
+@LazySingleton()
 class ExchangeRateBloc extends Bloc<ExchangeRateEvent, ExchangeRateState> {
   ExchangeRateBloc() : super(ExchangeRateState.initial()) {
     on<ExchangeRateEvent>(_onInitialEmitted);
