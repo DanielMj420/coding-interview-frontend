@@ -21,14 +21,14 @@ class BaseParagraph extends StatelessWidget {
         ? SelectableText(
             text,
             style: GoogleFonts.poppins(
-              fontSize: fontSize ?? 14.sp,
+              fontSize: fontSize ?? 12.sp,
               color: textColor ?? Colors.black,
             ),
           )
         : Text(
             text,
             style: GoogleFonts.poppins(
-              fontSize: fontSize ?? 14.sp,
+              fontSize: fontSize ?? 12.sp,
               color: textColor ?? Colors.black,
             ),
           );
