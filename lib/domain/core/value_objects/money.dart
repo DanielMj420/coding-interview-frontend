@@ -23,7 +23,7 @@ class Money extends ValueObject<Map<String, dynamic>> {
     return Money._(validate(amount, currency));
   }
 
-  factory Money.empty() => Money(amount: 0, currency: 'COP');
+  factory Money.empty() => Money(amount: 0, currency: 'TATUM-TRON-USDT');
 
   Money copyWith({double? amount, String? currency}) {
     final currentValue = value.getOrElse(() => {'amount': 0.0, 'currency': ''});

@@ -84,6 +84,7 @@ class Calculator extends StatelessWidget {
                 CustomDescriptionRow(
                   textKey: "Recibirás",
                   textValue: "= ${getAmount(
+                    state: state,
                     amount: state.money.failureOption.fold((_) => 0, (r) {
                       return state.money.getOrCrash()["amount"];
                     }),
@@ -126,7 +127,19 @@ class Calculator extends StatelessWidget {
   double getAmount({
     required double amount,
     required double exchangeRate,
+    required ExchangeRateState state,
   }) {
-    return amount * exchangeRate;
+    return state.exchangeType.failureOption.fold(
+      (_) {
+        return double.parse((amount * exchangeRate).toStringAsFixed(4));
+      },
+      (_) {
+        if (state.exchangeType.getOrCrash() == 0) {
+          return double.parse((amount * exchangeRate).toStringAsFixed(4));
+        } else {
+          return double.parse((amount / exchangeRate).toStringAsFixed(4));
+        }
+      },
+    );
   }
 }

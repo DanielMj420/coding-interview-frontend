@@ -99,6 +99,15 @@ class ExchangeRateBloc extends Bloc<ExchangeRateEvent, ExchangeRateState> {
             ),
           );
         }
+        emit(
+          state.copyWith(
+            money: state.money.copyWith(
+              currency: state.exchangeType.getOrCrash() == 0
+                  ? state.fiatCurrency
+                  : state.criptoCurrency,
+            ),
+          ),
+        );
       },
     );
   }
