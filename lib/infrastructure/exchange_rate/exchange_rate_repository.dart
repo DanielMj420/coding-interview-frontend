@@ -3,6 +3,7 @@ import 'package:coding_interview_frontend/domain/core/failures/data_source_failu
 import 'package:coding_interview_frontend/infrastructure/base_repository.dart';
 import 'package:coding_interview_frontend/infrastructure/core/remote_datasources/http.dart';
 import 'package:dartz/dartz.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:injectable/injectable.dart';
 
 @LazySingleton(as: IExchangeRateRepository)
@@ -24,8 +25,7 @@ class ExchangeRateRepository extends BaseRepository
   }) async {
     return processHttpRequest(
       submit: () async {
-        String baseUrl =
-            "https://74j6q7lg6a.execute-api.eu-west-1.amazonaws.com/stage/orderbook/public/recommendations";
+        String baseUrl = dotenv.env['BASE_DOMAIN'] ?? '';
 
         final queryParams = {
           'type': type.toString(),
